@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suleyman Gozen Homepage</title>
+<meta name="description" content="Suleyman Faruk Gozen, Assistant Professor of Economics at the University of Bristol: research on artificial intelligence and intangible capital, firm dynamics, innovation and corporate finance.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Suleyman Faruk Gozen">
+<meta property="og:url" content="https://www.suleymangozen.com/">
+<meta property="og:image" content="https://www.suleymangozen.com/photo.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://www.suleymangozen.com/">
+<meta property="og:description" content="Assistant Professor of Economics, University of Bristol. Artificial intelligence and intangible capital: firm dynamics, innovation and corporate finance.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  /* Layout: sticky identity column on the left; everything else — papers, teaching, talks, workshop — reads down the right in one column. */
+  :root{
+    --bg:#f5f7f8; --surface:#ffffff; --fg:#13181c; --muted:#5d6874;
+    --line:#e1e6ea; --line-soft:#eceff2;
+    --accent:#15606b; --accent-soft:#e3eef0; --gold:#7d5f16; --gold-soft:#f2ebda; --author:#1a5fb4; --jr:#b02a20; --jr-soft:#f8e6e3;
+    --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+    --sans:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#0f1316; --surface:#171c20; --fg:#e7ecef; --muted:#99a4ad;
+      --line:#262d33; --line-soft:#1e242a;
+      --accent:#74c3cc; --accent-soft:#153037; --gold:#d3b159; --gold-soft:#2c2616; --author:#8fb8f2; --jr:#f09e94; --jr-soft:#3a1c18;
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0f1316; --surface:#171c20; --fg:#e7ecef; --muted:#99a4ad;
+    --line:#262d33; --line-soft:#1e242a;
+    --accent:#74c3cc; --accent-soft:#153037; --gold:#d3b159; --gold-soft:#2c2616; --author:#8fb8f2; --jr:#f09e94; --jr-soft:#3a1c18;
+    color-scheme:dark;
+  }
+
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--fg);font-family:var(--serif);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+  .bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
+  body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+  .bar-in{max-width:1120px;margin:0 auto;padding-block:11px;
+    padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+    display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}
+  .bar-name{font-family:var(--sans);font-weight:600;font-size:14px;letter-spacing:.01em}
+  .nav{display:flex;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--author)}
+  .nav a:hover{color:var(--fg)}
+
+  .shell{max-width:1120px;margin:0 auto;padding-block:40px 56px;
+    padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+    display:grid;grid-template-columns:300px minmax(0,1fr);gap:56px;align-items:start}
+
+  .ident{position:sticky;top:calc(env(safe-area-inset-top,0px) + 76px);display:flex;flex-direction:column;gap:20px;min-width:0}
+  .portrait{width:100%;max-width:276px;aspect-ratio:5/4.3;object-fit:cover;object-position:50% 22%;
+    border-radius:2px;border:1px solid var(--line);display:block}
+  h1{font-weight:600;font-size:29px;line-height:1.12;margin:0;letter-spacing:-.012em;text-wrap:balance}
+  .roles{font-family:var(--sans);font-size:13.5px;color:var(--muted);line-height:1.5;margin-top:10px}
+  .roles strong{color:var(--fg);font-weight:500}
+  .roles a{color:var(--jr);border-bottom:1px solid transparent;padding-bottom:1px}
+  .roles a:hover{border-color:var(--jr)}
+  .blurb{font-size:15.5px;color:var(--muted);line-height:1.62;margin:0;text-align:left;text-wrap:pretty;overflow-wrap:break-word}
+  .blurb b{color:var(--fg);font-weight:600}
+  .fields{display:flex;flex-wrap:wrap;gap:6px}
+  .field{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);
+    background:var(--accent-soft);padding:4px 8px;border-radius:2px}
+  .rows{display:flex;flex-direction:column;gap:9px;border-top:1px solid var(--line);padding-top:18px;margin:0}
+  .row{display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;align-items:baseline}
+  .row dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+  .row dd{margin:0;min-width:0;overflow-wrap:anywhere;font-family:var(--sans);font-size:13.5px}
+  .row dd a{border-bottom:1px solid var(--line);padding-bottom:1px}
+  .row dd a:hover{color:var(--accent);border-color:var(--accent)}
+  .copy{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+    background:none;border:1px solid var(--line);border-radius:2px;padding:2px 6px;cursor:pointer;margin-left:6px}
+  .copy:hover{color:var(--accent);border-color:var(--accent)}
+
+  section{margin-bottom:50px}
+  .head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+    border-bottom:1px solid var(--fg);padding-bottom:8px;margin-bottom:2px}
+  .head h2{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin:0}
+  .head span{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em}
+
+  .note{margin:14px 0 0;font-size:14.5px;color:var(--jr)}
+  .note a{border-bottom:1px solid currentColor;padding-bottom:1px}
+  .note a:hover{color:var(--fg)}
+  .lead{font-size:17px;line-height:1.6;color:var(--fg);margin:16px 0 0;text-align:justify;text-justify:inter-word;hyphens:auto}
+  .lead + .lead{margin-top:12px;font-size:16px;color:var(--muted)}
+
+  .papers{list-style:none;margin:0;padding:0}
+  .papers li{padding-block:15px;border-bottom:1px solid var(--line-soft);display:flex;flex-direction:column;gap:7px;min-width:0}
+  .papers h3{font-size:16.5px;font-weight:600;line-height:1.3;margin:0;letter-spacing:-.006em}
+  .meta{font-family:var(--sans);font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .meta a:not(.draft),.units small a{color:var(--author);border-bottom:1px solid transparent;padding-bottom:1px}
+  .meta a:not(.draft):hover,.units small a:hover{border-color:var(--author)}
+  .units small a.awardlink{color:var(--jr)}
+  .units small a.awardlink:hover{border-color:var(--jr)}
+  .draft{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;
+    background:var(--accent);color:var(--bg);border:1px solid var(--accent);border-radius:2px;
+    padding:5px 13px;white-space:nowrap}
+  .draft:hover{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+  .pill{font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;padding:3px 7px;border-radius:2px;
+    background:var(--line-soft);color:var(--muted)}
+  .pill.rev{background:var(--jr-soft);color:var(--jr)}
+  .pill.rev2{background:var(--jr-soft);color:var(--jr)}
+  .pill.award{background:var(--gold-soft);color:var(--gold)}
+  a.pill:hover{box-shadow:inset 0 0 0 1px currentColor}
+
+  .abs{margin-top:1px;width:100%}
+  .abs summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:9px;padding:7px 11px;border-radius:2px;
+    background:var(--line-soft);font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+  .abs summary::-webkit-details-marker{display:none}
+  .abs summary::before{content:"";width:0;height:0;flex:none;
+    border-left:5px solid currentColor;border-top:4px solid transparent;border-bottom:4px solid transparent;transition:transform .18s ease}
+  .abs[open] summary::before{transform:rotate(90deg)}
+  .abs summary:hover{color:var(--accent)}
+  .abs p{margin:11px 2px 5px;font-size:14.5px;line-height:1.62;color:var(--muted);text-align:justify;text-justify:inter-word;hyphens:auto}
+  @media (prefers-reduced-motion:reduce){.abs summary::before{transition:none}}
+  .group{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+    margin:26px 0 2px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+  .group.first{margin-top:20px}
+  .group.red{color:var(--jr)}
+
+  .units{list-style:none;margin:0;padding:0}
+  .units li{padding-block:11px;border-bottom:1px solid var(--line-soft);display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;min-width:0}
+  .units b{font-weight:400;font-family:var(--sans);font-size:14px}
+  .units small{color:var(--muted);font-family:var(--sans);font-size:12.5px}
+
+  .talks{list-style:none;margin:0;padding:0;columns:2;column-gap:40px}
+  .talks li{break-inside:avoid;display:grid;grid-template-columns:38px minmax(0,1fr);gap:12px;padding-block:9px;
+    border-bottom:1px solid var(--line-soft)}
+  .mo{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+  .talks b{font-weight:400;font-family:var(--sans);font-size:13.5px;display:block;line-height:1.4;color:var(--author)}
+  .talks a b{border-bottom:1px solid transparent}
+  .talks a:hover b{border-color:var(--author)}
+  .talks small{color:var(--muted);font-family:var(--sans);font-size:12.5px}
+  .sched{color:var(--accent)}
+
+  .ws{display:flex;flex-direction:column;gap:14px;padding-top:18px}
+  .ws img{width:100%;max-width:100%;aspect-ratio:16/9.4;object-fit:cover;object-position:50% 72%;
+    border-radius:2px;border:1px solid var(--line);display:block}
+  .ws p{margin:0;font-size:15px;color:var(--muted);line-height:1.6;text-align:justify;text-justify:inter-word;hyphens:auto}
+  .ws p.soon{text-align:left;hyphens:none}
+  .ws p.soon{color:var(--fg)}
+  .ws p.soon .tag{font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;
+    background:var(--jr-soft);color:var(--jr);padding:3px 7px;border-radius:2px;margin-right:9px}
+  .btn{align-self:flex-start;display:inline-block;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;
+    background:var(--jr);border:1px solid var(--jr);color:var(--bg);padding:8px 15px;border-radius:2px}
+  .btn:hover{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+
+  .notes{list-style:none;margin:0;padding:0}
+  .notes li{padding-block:16px;border-bottom:1px solid var(--line-soft);display:flex;flex-direction:column;gap:6px;min-width:0}
+  .notes h3{font-size:16.5px;font-weight:600;line-height:1.3;margin:0}
+  .notes p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.6;text-align:justify;text-justify:inter-word;hyphens:auto}
+  .notes p a{color:var(--jr);border-bottom:1px solid currentColor;padding-bottom:1px}
+  .notes p a:hover{color:var(--fg)}
+  .notes .more{align-self:flex-start;margin-top:3px;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.09em;
+    text-transform:uppercase;background:var(--jr);color:var(--bg);border:1px solid var(--jr);border-radius:2px;padding:5px 13px}
+  .notes .more:hover{background:var(--fg);border-color:var(--fg)}
+
+  .theme-btn{margin-left:auto;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted);background:none;border:1px solid var(--line);border-radius:2px;padding:4px 9px;cursor:pointer}
+  .theme-btn:hover{color:var(--fg);border-color:var(--muted)}
+  .tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:16px 0 0}
+  .chip{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+    background:none;border:1px solid var(--line);border-radius:2px;padding:5px 10px;cursor:pointer}
+  .chip:hover{color:var(--fg);border-color:var(--muted)}
+  .chip.is-on{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+  .tools input{flex:1 1 170px;min-width:0;font-family:var(--sans);font-size:13px;color:var(--fg);
+    background:var(--surface);border:1px solid var(--line);border-radius:2px;padding:6px 10px}
+  .tools input::placeholder{color:var(--muted)}
+  .count{margin:12px 0 0;font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+  .papers li[hidden],.talks li[hidden]{display:none}
+  .tag-up{display:inline-block;margin-left:8px;font-family:var(--mono);font-size:9.5px;font-weight:500;letter-spacing:.08em;
+    text-transform:uppercase;background:var(--jr);color:var(--bg);border-radius:2px;padding:2px 6px;vertical-align:1px}
+  .talks li.past{opacity:.72}
+  @media print{
+    .bar,.tools,.count,.copy,.theme-btn{display:none!important}
+    body{background:#fff;color:#000}
+    .shell{display:block;max-width:none;padding:0;gap:0}
+    .ident{position:static;gap:12px;margin-bottom:22px}
+    .portrait{max-width:130px}
+    .ws img{max-width:420px}
+    .draft,.btn,.notes .more{background:none;color:#000;border:1px solid #999}
+    .abs summary{background:none;padding-left:0}
+    .papers li,.talks li,.units li,.notes li{break-inside:avoid}
+    .talks{columns:2}
+  }
+  footer{border-top:1px solid var(--line);padding-top:16px;font-family:var(--mono);font-size:11px;
+    letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  @media (max-width:860px){
+    .shell{grid-template-columns:minmax(0,1fr);gap:38px;padding-block:28px 48px}
+    .ident{position:static;top:auto}
+    .portrait{max-width:168px}
+    .talks{columns:1}
+  }
+  @media (max-width:520px){
+    h1{font-size:26px}
+    .papers h3,.notes h3{font-size:16.5px}
+    .lead{font-size:16px}
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="bar-in">
+    <span class="bar-name">Suleyman Faruk Gozen</span>
+    <nav class="nav">
+      <a href="#research">Research</a>
+      <a href="#talks">Talks</a>
+      <a href="#workshop">Workshop</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#news">Media &amp; announcements</a>
+    </nav>
+    <button class="theme-btn" type="button" id="theme">Dark</button>
+  </div>
+</div>
+
+<div class="shell">
+  <aside class="ident" id="contact">
+    <img class="portrait" src="photo.jpg" alt="Suleyman Faruk Gozen">
+    <div>
+      <h1>Suleyman Faruk Gozen</h1>
+      <div class="roles"><strong>Assistant Professor of Economics</strong><br><a href="https://www.bristol.ac.uk/economics/" target="_blank" rel="noopener">University of Bristol</a><br>Ph.D., <a href="https://economics.uchicago.edu" target="_blank" rel="noopener">University of Chicago</a></div>
+    </div>
+    <p class="blurb">I work on <b>artificial intelligence</b> and <b>intangible capital</b>: how they shape firm dynamics and innovation, and how firms finance them.</p>
+    <div class="fields">
+      <span class="field">Artificial intelligence</span>
+      <span class="field">Intangible capital</span>
+      <span class="field">Firm dynamics</span>
+      <span class="field">Corporate finance</span>
+    </div>
+    <dl class="rows">
+      <div class="row"><dt>Email</dt><dd><a href="mailto:suleyman.gozen@bristol.ac.uk">suleyman.gozen<wbr>@bristol.ac.uk</a><button class="copy" id="copy-email" type="button">Copy</button></dd></div>
+      <div class="row"><dt>CV</dt><dd><a href="https://drive.google.com/file/d/1tEWoTteDeZJI_Pt74OyhTFSA1TgbojAC/view?usp=sharing" target="_blank" rel="noopener">Download PDF</a></dd></div>
+      <div class="row"><dt>GitHub</dt><dd><a href="https://github.com/sgozen" target="_blank" rel="noopener">github.com/sgozen</a></dd></div>
+      <div class="row"><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/suleyman-faruk-gozen" target="_blank" rel="noopener">linkedin.com/in/suleyman-faruk-gozen</a></dd></div>
+      <div class="row"><dt>Office</dt><dd>School of Economics, University of Bristol</dd></div>
+    </dl>
+  </aside>
+
+  <main>
+    <section id="about">
+      <div class="head"><h2>Research interests</h2></div>
+      <p class="lead">My research spans macroeconomics, firm dynamics, corporate finance, technological change, and the economics of innovation and artificial intelligence.</p>
+      <p class="lead">My work examines how intangible capital drives firm outcomes along two dimensions: AI, innovation, and firm dynamics; and AI, intangible capital, corporate finance, and financial intermediation.</p>
+    </section>
+
+    <section id="research">
+      <div class="head"><h2>Research papers</h2></div>
+      <div class="tools">
+        <input id="q" type="search" placeholder="Search titles, co-authors, abstracts">
+        <button class="chip" type="button" id="expand-all">Expand all</button>
+      </div>
+      <p class="count" id="count">13 papers</p>
+      <ul class="papers" id="paper-list">
+        <li data-topic="ai inn">
+          <h3>AI-Skilled Labor, Intangible Capital, and Firm Productivity: Evidence from the TensorFlow Shock</h3>
+          <div class="meta">
+            <a class="draft" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4922684" target="_blank" rel="noopener">Draft</a>
+            <a class="pill rev" href="https://www.sciencedirect.com/journal/research-policy" target="_blank" rel="noopener">Under revision &middot; Research Policy</a> <a href="https://sites.google.com/bc.edu/yusuf-ozkara" target="_blank" rel="noopener">Yusuf Ozkara</a>, <a href="https://sites.google.com/view/ruveydagozen" target="_blank" rel="noopener">Ruveyda Nur Gozen</a>
+          </div>
+          <details class="abs"><summary>Abstract</summary><p>This paper studies how the complementarity between intangible capital and AI-skilled workers shapes firm-level productivity. We exploit the 2015 release of Google TensorFlow as a plausibly exogenous shock to AI effectiveness. Using a difference-in-differences framework with value-added labor productivity and total factor productivity, we show that firms with a higher AI-worker share increase their productivity. The gains rise with firm size and intangible capital, and the effect is concentrated in the upper part of the productivity distribution. This evidence indicates that the complementarity between intangible capital and AI-skilled labor widens productivity dispersion. We also provide TensorFlow-specific evidence using job postings and worker profiles from Revelio Labs proprietary data.</p></details>
+        </li>
+        <li data-topic="ai">
+          <h3>Artificial Intelligence and Workplace Misconduct</h3>
+          <div class="meta">
+            <a class="draft" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5446134" target="_blank" rel="noopener">Draft</a>
+            <a class="pill rev" href="https://www.sciencedirect.com/journal/journal-of-corporate-finance" target="_blank" rel="noopener">Under revision &middot; Journal of Corporate Finance</a> <a href="https://sites.google.com/view/mehmet-furkan-karaca" target="_blank" rel="noopener">Mehmet Furkan Karaca</a>, <a href="https://experts.exeter.ac.uk/23139-monika-tarsalewska" target="_blank" rel="noopener">Monika Tarsalewska</a>
+          </div>
+          <details class="abs"><summary>Abstract</summary><p>This paper studies the impact of artificial intelligence (AI) adoption on workplace misconduct. Using regression analysis and a quasi-natural experiment around the open-source launch of Google Brain's TensorFlow machine learning toolkit, we find that firms with higher AI intensity experience significant and persistent declines in workplace violations and penalty amounts. The effects operate primarily through productivity-enhancing complementarities and discretionary expense increases, while labor-adjustment channels play no role. Benefits are concentrated among larger, intangible- and organizational-capital intensive firms, which highlights uneven gains from AI adoption and suggests that AI may widen compliance inequality among firms.</p></details>
+        </li>
+        <li data-topic="ai">
+          <h3>The Pre-ChatGPT AI Era and Firm Sales: Domestic versus International Margins</h3>
+          <div class="meta">
+            <a class="draft" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5016794" target="_blank" rel="noopener">Draft</a>
+            <a class="pill rev2" href="https://www.sciencedirect.com/journal/european-economic-review" target="_blank" rel="noopener">Under review &middot; European Economic Review</a> <a href="https://profiles.sussex.ac.uk/p640919-pinar-gunes" target="_blank" rel="noopener">Pinar Gunes</a>, <a href="https://sites.google.com/view/mehmet-furkan-karaca" target="_blank" rel="noopener">Mehmet Furkan Karaca</a>
+          </div>
+          <details class="abs"><summary>Abstract</summary><p>We study how artificial intelligence (AI) affects firms' sales in the pre-ChatGPT era. Exploiting the 2015 release of Google TensorFlow as a plausibly exogenous shock to AI-worker effectiveness, we implement a difference-in-differences design that leverages firm-level variation in pre-shock AI exposure. We show that AI adoption generates large and persistent increases in total, domestic, and foreign sales, but only among large firms; smaller firms exhibit no responses. Mechanism evidence suggests that while AI exposure raises operating efficiency and productivity for large firms, firms with financial constraints and limited intangible capital are less able to translate AI into sales gains.</p></details>
+        </li>
+        <li data-topic="fin">
+          <h3>Local Credit Expansion, Bank Ownership, and Firm Responses: Evidence from India</h3>
+          <div class="meta">
+            <a class="draft" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4921212" target="_blank" rel="noopener">Draft</a>
+            <a class="pill rev2" href="https://academic.oup.com/oep" target="_blank" rel="noopener">Under review &middot; Oxford Economic Papers</a> <a href="https://sites.google.com/site/yogeshwarbharat/home" target="_blank" rel="noopener">Yogeshwar Bharat</a>, <a href="https://sites.google.com/view/david-hong/home" target="_blank" rel="noopener">David Hong</a>, <a href="https://sites.google.com/view/mehmet-furkan-karaca" target="_blank" rel="noopener">Mehmet Furkan Karaca</a>
+          </div>
+          <details class="abs"><summary>Abstract</summary><p>We examine how bank ownership shapes the transmission of banking reforms to credit expansion and firm responses. Our analysis exploits the Reserve Bank of India's 2006 Bank Authorization Policy as a quasi-natural experiment, combining bank branch data, matched firm-bank loan data, and firm financials in a difference-in-differences design. Private-sector banks expanded their branch presence in underbanked districts, while public-sector banks showed no response. Private-sector lending shifted disproportionately toward firms ranked higher by a pre-reform measure of the marginal revenue product of capital. These firms accumulated capital, although value added showed no statistically significant response. Our results show that a common banking reform can be transmitted differently by public- and private-sector banks.</p></details>
+        </li>
+        <li data-topic="ai inn">
+          <h3>Who Invents AI? AI Labor and the Production of AI Innovation</h3>
+          <div class="meta">
+            <a class="draft" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6997118" target="_blank" rel="noopener">Draft</a>
+            <a class="pill rev2" href="https://onlinelibrary.wiley.com/journal/14679310" target="_blank" rel="noopener">Under review &middot; R&amp;D Management</a> Solo-authored
+          </div>
+          <details class="abs"><summary>Abstract</summary><p>I investigate whether a firm's AI labor causes its AI invention. Using firm-level data on U.S. public firms, I exploit the 2015 open-sourcing of TensorFlow, a large drop in the cost of building deep-learning systems, interacted with firms' pre-shock AI-labor exposure. Firms with more AI labor produced more AI patents, especially in deep-learning technologies and among large, organizational-capital rich firms. The effect operates through R&amp;D and AI inventors, and concentrates AI invention among AI-rich firms. An instrumental-variables strategy confirms a positive, AI-specific effect.</p></details>
+        </li>
+        <li data-topic="fin">
+          <h3>Soft Assets, Hard Credit: Corporate Intangibles and Nonbank Borrowing</h3>
+          <div class="meta">
+            <a class="draft" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6984102" target="_blank" rel="noopener">Draft</a>
+            <a class="pill rev2" href="https://link.springer.com/journal/10693" target="_blank" rel="noopener">Under review &middot; Journal of Financial Services Research</a> <a href="https://orcid.org/0009-0008-1802-4031" target="_blank" rel="noopener">Solomon Nderitu</a>
+          </div>
+          <details class="abs"><summary>Abstract</summary><p>Intangible capital and nonbank financial institutions (NBFIs) have both grown sharply in the U.S. economy, yet intangible assets make poor collateral for bank lending. Using linked DealScan-Compustat data on U.S. public firms, we examine whether intangible-intensive firms sort toward nonbank lenders and on what terms. We find that intangible-intensive firms rely more on NBFI credit and, when borrowing from nonbanks, pay higher spreads and face stricter collateral requirements. The association with NBFI reliance is statistically significant only for large firms, whereas small intangible-intensive firms have the largest estimated spread premium. Around the U.S. Basel III Final Rule, a tightening of bank capital requirements, we find that high-intangible firms shifted disproportionately toward nonbank credit relative to low-intangible firms and faced higher loan rates. Our results suggest that nonbank lenders expand credit access for intangible-intensive firms, but at a higher price.</p></details>
+        </li>
+        <li data-topic="ai fin">
+          <h3>Artificial Intelligence and Firm Financing</h3>
+          <div class="meta">
+            <a class="draft" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7626298" target="_blank" rel="noopener">Draft</a>
+            <a class="pill rev2" href="https://www.sciencedirect.com/journal/journal-of-financial-stability" target="_blank" rel="noopener">Submitted &middot; Journal of Financial Stability</a> Solo-authored
+          </div>
+          <details class="abs"><summary>Abstract</summary><p>This paper studies how firms finance artificial intelligence (AI). We combine a firm-year measure of AI intensity with Compustat balance sheets and DealScan syndicated loan contracts. Alongside reduced-form within-firm regressions, we use two identification designs: a shift-share instrument built from AI diffusion within a firm's industry, and a stacked difference-in-differences design around the year a firm first reaches the AI frontier. We find that as firms become more AI-intensive, they (i) hold less cash and borrow more, (ii) move from revolving credit into term loans, (iii) pay higher interest spreads and pledge more receivables, inventory, and intangibles, (iv) borrow more under earnings-based covenants, and (v) raise more institutional credit, especially from non-bank lenders. Both designs confirm these responses, which accompany an expansion in investment, employment, and profitability. AI adoption thus tends to replace liquidity buffers with drawn and earnings-contingent debt that is increasingly held outside the banking system.</p></details>
+        </li>
+        <li data-topic="fin">
+          <h3>Strategic Bank Consolidations: Intangible Capital Channel</h3>
+          <div class="meta">
+            <a class="draft" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4917995" target="_blank" rel="noopener">Draft</a>
+            <a class="pill award" href="https://sbfc.sydney.edu.au/2025/" target="_blank" rel="noopener">Best paper in banking &middot; Sydney 2025</a> <a href="https://sites.google.com/view/david-hong/home" target="_blank" rel="noopener">David Hong</a>, <a href="https://sites.google.com/view/mehmet-furkan-karaca" target="_blank" rel="noopener">Mehmet Furkan Karaca</a>
+          </div>
+          <details class="abs"><summary>Abstract</summary><p>This paper examines how internally generated intangible capital shapes merger patterns and post-merger performance in the U.S. banking sector. We construct a novel measure of intangible capital using granular regulatory expense data and quantify assortative matching between acquirers and targets. Employing a difference-in-differences design with propensity score matching, we causally show that higher assortative matching in intangible capital leads to significant improvements in post-merger bank performance. We complement the empirical analysis with a dynamic search-theoretic model of bank mergers, demonstrating that strategic complementarities in intangibles give rise to assortative matching equilibria. Our findings provide new insights into banking consolidation.</p></details>
+        </li>
+        <li data-topic="inn">
+          <h3>Business Dynamism and Innovation: Evidence from Novel 19th-Century Microdata</h3>
+          <div class="meta">
+            <a class="draft" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7144078" target="_blank" rel="noopener">Draft</a>
+            <a href="https://sites.google.com/site/abergeaudeco" target="_blank" rel="noopener">Antonin Bergeaud</a>, <a href="https://sites.google.com/view/ruveydagozen" target="_blank" rel="noopener">Ruveyda Nur Gozen</a>
+          </div>
+          <details class="abs"><summary>Abstract</summary><p>We construct a novel establishment-level dataset combining the nineteenth-century U.S. Census of Manufactures (1850-1880) with patent records from CUSP to examine how innovation shaped firm performance in early industrial America. Patenting establishments were substantially larger than comparable non-patenters across all dimensions (employment, capital, output, and output per worker), with premia further amplified among firms that produced breakthrough inventions. Estimating establishment-level production functions using the Levinsohn-Petrin approach, we find that patenting is associated with higher revenue total factor productivity (TFPR) while leaving markups unchanged on average. Breakthrough innovations, however, are associated with gains on both margins, with a size decomposition revealing the strongest amplification among the largest establishments, consistent with superstar dynamics, yet small breakthrough innovators also capture meaningful gains, suggesting the returns to invention were not exclusive to large firms.</p></details>
+        </li>
+        <li data-topic="ai">
+          <h3>Board Characteristics and AI Adoption</h3>
+          <div class="meta">
+            <a class="draft" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7110340" target="_blank" rel="noopener">Draft</a>
+            <a href="https://sites.google.com/view/ruveydagozen" target="_blank" rel="noopener">Ruveyda Nur Gozen</a>, <a href="https://sites.google.com/site/sezeryasar/" target="_blank" rel="noopener">Sezer Yasar</a>
+          </div>
+          <details class="abs"><summary>Abstract</summary><p>We study the relationship between corporate board characteristics and firm-level artificial intelligence (AI) adoption. Linking BoardEx director data to Compustat for U.S. public firms, we find at the board level that firms whose directors have larger external networks, more qualifications, shorter tenure, and more diverse nationalities adopt substantially more AI than their industry and year peers, and that this relationship is strongest in small, young, high-growth, and AI-intensive firms. The same profile reappears at the CEO level: CEOs with larger networks, more qualifications, and shorter tenure run firms that adopt more AI. We then analyze why some boards adopt AI more. A board-network shift-share design shows that firms adopt more AI when their directors sit on other, more AI-intensive boards, which we read as evidence of a director-borne diffusion channel. Lastly, we use board-member deaths as a quasi-random shock to board composition and instrument the board index with a signed death shock; the component of board AI-orientation moved by these deaths maps into higher AI adoption.</p></details>
+        </li>
+        <li data-topic="inn">
+          <h3>Executive Compensation, Firm Investment and Innovation</h3>
+          <div class="meta">
+            <a class="draft" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5418114" target="_blank" rel="noopener">Draft</a>
+            <a href="https://www.mtdemir.com" target="_blank" rel="noopener">Mehmet T. Demir</a>, <a href="https://sites.google.com/view/mehmet-furkan-karaca" target="_blank" rel="noopener">Mehmet Furkan Karaca</a>
+          </div>
+          <details class="abs"><summary>Abstract</summary><p>We study whether tax rules that increase the cost of executive incentive pay affect corporate innovation. The 2017 Tax Cuts and Jobs Act (TCJA) eliminated the Section 162(m) deduction for qualified performance-based compensation, differentially exposing firms that relied more on such pay before the reform. Using pre-reform reliance as a continuous treatment in difference-in-differences and event-study designs, we find that more exposed firms reduce R&amp;D, patent applications, and intangible capital, while capital expenditures do not respond significantly. These firms also reduce performance-based compensation and executive vega, consistent with weaker incentives for managerial risk-taking. The effects are larger among firms with weaker growth opportunities and lower financial resilience, and are robust to controls for other TCJA provisions and alternative exposure measures. The results show that compensation-tax policy can affect innovation through managerial incentive contracts.</p></details>
+        </li>
+        <li data-topic="fin">
+          <h3>Intangible Capital, Heterogeneous Borrowing Types, and Firm Dynamics</h3>
+          <div class="meta">
+            <a class="draft" href="https://research-information.bris.ac.uk/en/publications/intangible-capital-heterogeneous-borrowing-types-and-firm-dynami" target="_blank" rel="noopener">Draft</a>
+            <a href="https://sites.google.com/view/david-hong/home" target="_blank" rel="noopener">David Hong</a>, <a href="https://sites.google.com/view/mehmet-furkan-karaca" target="_blank" rel="noopener">Mehmet Furkan Karaca</a>
+          </div>
+          <details class="abs"><summary>Abstract</summary><p>We study how non-rival intangible capital interacts with borrowing structure and financial frictions to shape firm dynamics over business cycles. We show: (i) the positive and significant association between intangible-capital growth and labor productivity growth becomes smaller in recessions; (ii) the non-rivalry of intangible capital is evident such that intangible growth predicts faster sales growth and broader firm scope, yet this relationship declines in recessions; (iii) intangible-intensive firms carry less total and secured debt, and substitute toward earnings-based covenant (EBC) borrowing over asset-based covenant (ABC) borrowing; and (iv) intangible-intensive firms with EBC have tightening financial constraints in recessions, which mitigates the productivity payoff of non-rival intangibles. We rationalize these patterns in a general-equilibrium model in which firms draw EBC/ABC constraints at entry and intangibles are non-rival in the firm production technology. The model yields a credit-amplification mechanism with heterogeneous borrowing types, reconciling the productivity slowdown despite rising intangibles.</p></details>
+        </li>
+        <li data-topic="inn">
+          <h3>Intangible Capital and Competition in Ride Sharing: The Case of the Lyft-Motivate Merger</h3>
+          <div class="meta">
+            <a class="draft" href="https://research-information.bris.ac.uk/en/publications/intangible-capital-and-competition-in-ride-sharing-the-case-of-l" target="_blank" rel="noopener">Draft</a>
+            <a href="https://github.com/hktosun" target="_blank" rel="noopener">Hasan K. Tosun</a>
+          </div>
+          <details class="abs"><summary>Abstract</summary><p>This study focuses on estimating the role of intangible capital on firms' competitiveness. We use Lyft's acquisition of Motivate, the biggest bike sharing company in the U.S. at the time, to evaluate the degree to which intangible capital affects the competition between Lyft and Uber. By acquiring Motivate, Lyft gained more consumer data, which we interpret as intangible capital, and bikes' presence on the streets potentially helped Lyft build stronger brand salience. We estimate the effect of the acquisition on Lyft's ridership by employing trip-level ride sharing data from New York City and using a difference-in-difference-in-differences model. We find that the acquisition helped Lyft increase its ridership by around 6%.</p></details>
+        </li>
+      </ul>
+
+      <p class="group">Work in progress</p>
+      <ul class="units">
+        <li><b>Measuring Bank Intangible Capital</b><small><a href="https://sites.google.com/view/david-hong/home" target="_blank" rel="noopener">David Hong</a>, <a href="https://sites.google.com/view/mehmet-furkan-karaca" target="_blank" rel="noopener">Mehmet Furkan Karaca</a></small></li>
+        <li><b>Local Credit Markets and Firm Dynamics</b><small><a href="https://scholar.google.com/citations?user=tWrVE4QAAAAJ&amp;hl=tr" target="_blank" rel="noopener">Mehmet Selman Colak</a>, <a href="https://sites.google.com/view/mehmet-furkan-karaca" target="_blank" rel="noopener">Mehmet Furkan Karaca</a>, <a href="https://www.linkedin.com/in/mehmet-emre-%C5%9Famc%C4%B1-a48958105/?originalSubdomain=tr" target="_blank" rel="noopener">Mehmet Emre Samci</a></small></li>
+        <li><b>Directed Lending and Misallocation in an Emerging Economy</b><small><a href="https://sites.google.com/site/yogeshwarbharat/home" target="_blank" rel="noopener">Yogeshwar Bharat</a>, <a href="https://sites.google.com/view/david-hong/home" target="_blank" rel="noopener">David Hong</a>, <a href="https://sites.google.com/view/mehmet-furkan-karaca" target="_blank" rel="noopener">Mehmet Furkan Karaca</a></small></li>
+        <li><b>Non-Banks and Zombie Firms</b><small><a href="https://sites.google.com/view/david-hong/home" target="_blank" rel="noopener">David Hong</a>, <a href="https://sites.google.com/view/mehmet-furkan-karaca" target="_blank" rel="noopener">Mehmet Furkan Karaca</a>, <a href="https://sites.google.com/site/sotirioskokas/home" target="_blank" rel="noopener">Sotirios Kokas</a>, <a href="https://sites.google.com/view/onursefiloglu/home" target="_blank" rel="noopener">Onur Sefiloglu</a></small></li>
+        <li><b>Immigration, Industrialization, and Innovation: Evidence from the Age of Mass Migration</b><small><a href="https://www.thorberger.se/" target="_blank" rel="noopener">Thor Berger</a>, <a href="https://sites.google.com/view/ruveydagozen" target="_blank" rel="noopener">Ruveyda Nur Gozen</a></small></li>
+        <li><b>Steam Power as General Purpose Technology</b><small><a href="https://www.thorberger.se/" target="_blank" rel="noopener">Thor Berger</a>, <a href="https://sites.google.com/view/ruveydagozen" target="_blank" rel="noopener">Ruveyda Nur Gozen</a></small></li>
+      </ul>
+    </section>
+
+    <section id="talks">
+      <div class="head"><h2>Talks 2026</h2></div>
+      <ul class="talks" id="talk-list">
+        <li data-date="2026-11-15"><span class="mo sched">Nov</span><a href="https://cepr.org/events/cepr-macroeconomics-and-growth-annual-symposium-2026" target="_blank" rel="noopener"><b>CEPR Annual Meeting of the Macroeconomics and Growth</b><small>CEPR</small></a></li>
+        <li data-date="2026-09-15"><span class="mo">Sep</span><a href="https://cepr.org/events/cepr-european-economic-policy-rpn-annual-conference-global-imbalances-competitiveness-and" target="_blank" rel="noopener"><b>CEPR European Economic Policy RPN Annual Conference</b><small>CEPR</small></a></li>
+        <li data-date="2026-09-15"><span class="mo">Sep</span><a href="https://www.hhs.se/research/departments/economics/seminars/" target="_blank" rel="noopener"><b>Departmental Seminar</b><small>Stockholm School of Economics</small></a></li>
+        <li data-date="2026-06-15"><span class="mo">Jun</span><a href="https://piec.gr/" target="_blank" rel="noopener"><b>1st Piraeus International Economic Conference</b><small>Piraeus</small></a></li>
+        <li data-date="2026-06-15"><span class="mo">Jun</span><span><b>Bristol Corporate Finance Workshop</b><small>University of Bristol</small></span></li>
+        <li data-date="2026-06-15"><span class="mo">Jun</span><a href="https://bse.eu/summer-forum/workshops/firms-in-changing-background" target="_blank" rel="noopener"><b>BSE Summer Forum</b><small>Barcelona School of Economics</small></a></li>
+        <li data-date="2026-05-15"><span class="mo">May</span><span><b>4th Workshop in Economic History</b><small>Uppsala University</small></span></li>
+        <li data-date="2026-05-15"><span class="mo">May</span><a href="https://www.linkedin.com/posts/chaowen-zheng-a1684b1b6_time-series-ai-in-macroeconomics-finance-activity-7417546823541768192-q_VP/" target="_blank" rel="noopener"><b>Time Series AI in Macro and Finance</b><small>University of Bristol</small></a></li>
+        <li data-date="2026-05-15"><span class="mo">May</span><a href="https://www.escoe.ac.uk/events/escoe-conference-2026/" target="_blank" rel="noopener"><b>ESCoE Conference on Economic Measurement</b><small>King&rsquo;s Business School</small></a></li>
+        <li data-date="2026-05-15"><span class="mo">May</span><span><b>Cardiff Workshop on Trade and Development</b><small>Cardiff Business School</small></span></li>
+        <li data-date="2026-05-15"><span class="mo">May</span><a href="https://global-intaninvest.luiss.it/global-intan-invest-conference-2026-rome/" target="_blank" rel="noopener"><b>Global INTAN-Invest Conference</b><small>Luiss Business School</small></a></li>
+        <li data-date="2026-04-15"><span class="mo">Apr</span><a href="https://openingdoors.eventsair.com/ses26/" target="_blank" rel="noopener"><b>Scottish Economic Society Annual Conference</b><small>University of Glasgow</small></a></li>
+        <li data-date="2026-02-15"><span class="mo">Feb</span><a href="https://www.productivity.ac.uk/" target="_blank" rel="noopener"><b>The Productivity Institute Spring Brown Bag</b><small>Seminar series</small></a></li>
+        <li data-date="2026-02-15"><span class="mo">Feb</span><a href="https://cepr.org/events/2nd-cepr-applied-micro-economic-history-workshop" target="_blank" rel="noopener"><b>2nd CEPR Applied Micro-Economic History Workshop</b><small>University of St Gallen</small></a></li>
+      </ul>
+    </section>
+
+    <section id="workshop">
+      <div class="head"><h2>Intangible Capital Workshop</h2></div>
+      <div class="ws">
+        <img src="workshop.jpg" alt="Participants of the Intangible Capital Workshop at the University of Bristol">
+        <p>I organize the Intangible Capital Workshop at the University of Bristol, which brings together cutting-edge research on intangible capital, AI, firm dynamics, innovation, productivity, skills, business ownership, and closely related topics shaping current economic research and policy debates.</p>
+        <a class="btn" href="https://drive.google.com/file/d/1yg09Pad_ntmtjT1K-KFPGaKoM_jB9r3G/view" target="_blank" rel="noopener">Intangible Capital Workshop programme (PDF)</a>
+        <p class="soon"><span class="tag">Forthcoming</span>AI Workshop, University of Bristol. Details to be announced.</p>
+      </div>
+    </section>
+
+
+
+    <section id="teaching">
+      <div class="head"><h2>Teaching</h2></div>
+      <p class="note">Fellow of the Higher Education Academy (FHEA), <a href="https://www.bristol.ac.uk/bilt/staff-development/create-hea-fellowship/" target="_blank" rel="noopener">CREATE programme</a>.</p>
+
+      <p class="group first red">University of Bristol, 2022&ndash;present</p>
+      <ul class="units">
+        <li><b>Macroeconomics for Economics and Finance</b><small>Undergraduate</small></li>
+        <li><b>Growth and Development</b><small>Undergraduate</small></li>
+        <li><b>MSc dissertation supervision</b><small>MSc Economics, Finance and Management &middot; MSc Economics with Data Science</small></li>
+      </ul>
+
+      <p class="group red">University of Chicago, 2017&ndash;2022</p>
+      <ul class="units">
+        <li><b>The Elements of Economic Analysis</b><small>Lecturer &middot; <a class="awardlink" href="https://economics.uchicago.edu/phd-program/student-awards" target="_blank" rel="noopener">Outstanding Undergraduate Teaching Award</a></small></li>
+        <li><b>The Elements of Economic Analysis I&ndash;III</b><small>Tutor</small></li>
+        <li><b>Introduction to Money and Banking</b><small>Tutor</small></li>
+        <li><b>Introduction to Macroeconomics</b><small>Tutor</small></li>
+        <li><b>Advanced Microeconomics, MBA</b><small>Tutor</small></li>
+      </ul>
+    </section>
+    <section id="news">
+      <div class="head"><h2>Media &amp; announcements</h2></div>
+      <ul class="notes">
+        <li>
+          <h3>Interview on Faculti</h3>
+          <p>I gave an interview on <a href="https://faculti.net/" target="_blank" rel="noopener">Faculti</a> (global academic media platform), titled &ldquo;AI Adoption, Intangible Capital, and the Uneven Future of Workplace Productivity&rdquo;, where I discuss my ongoing research on how artificial intelligence is transforming firm dynamics, productivity, and the nature of workplace misconduct.</p>
+          <a class="more" href="https://faculti.net/ai-adoption-intangible-capital-and-the-uneven-future-of-workplace-productivity" target="_blank" rel="noopener">Watch the interview</a>
+        </li>
+        <li>
+          <h3>Looking for expertise in machine learning and LLMs</h3>
+          <p>I am looking for someone with strong expertise in machine learning and large language models to contribute to text-based analysis in upcoming research projects. If you have strong experience in these areas and are interested in working on research projects, please write me for further details.</p>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <span>School of Economics, University of Bristol</span>
+      <span>Page updated October 2026</span>
+    </footer>
+  </main>
+</div>
+
+<script>
+  document.getElementById('copy-email').addEventListener('click', function (e) {
+    var btn = e.currentTarget;
+    var email = 'suleyman.gozen@bristol.ac.uk';
+    var done = function () {
+      btn.textContent = 'Copied';
+      setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
+    };
+    try {
+      navigator.clipboard.writeText(email).then(done, function () { btn.textContent = 'Select it'; });
+    } catch (err) {
+      btn.textContent = 'Select it';
+    }
+  });
+</script>
+
+<script>
+  (function () {
+    var root = document.documentElement, btn = document.getElementById('theme');
+    function current() {
+      var t = root.getAttribute('data-theme');
+      if (t) return t;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    function label() { btn.textContent = current() === 'dark' ? 'Light' : 'Dark'; }
+    try { var saved = localStorage.getItem('theme'); if (saved) root.setAttribute('data-theme', saved); } catch (e) {}
+    label();
+    btn.addEventListener('click', function () {
+      var next = current() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      label();
+    });
+  })();
+
+  (function () {
+    var list = document.getElementById('paper-list');
+    var items = [].slice.call(list.children);
+    var chips = [].slice.call(document.querySelectorAll('.chip[data-topic]'));
+    var q = document.getElementById('q');
+    var count = document.getElementById('count');
+    var topic = 'all';
+    function render() {
+      var needle = (q.value || '').trim().toLowerCase(), shown = 0;
+      items.forEach(function (li) {
+        var inTopic = topic === 'all' ||
+          (' ' + (li.getAttribute('data-topic') || '') + ' ').indexOf(' ' + topic + ' ') > -1;
+        var inText = !needle || (li.textContent || '').toLowerCase().indexOf(needle) > -1;
+        var show = inTopic && inText;
+        li.hidden = !show;
+        if (show) shown++;
+      });
+      count.textContent = shown === items.length
+        ? items.length + ' papers'
+        : shown + ' of ' + items.length + ' papers';
+    }
+    chips.forEach(function (c) {
+      c.addEventListener('click', function () {
+        topic = c.getAttribute('data-topic');
+        chips.forEach(function (x) { x.classList.toggle('is-on', x === c); });
+        render();
+      });
+    });
+    q.addEventListener('input', render);
+    render();
+
+    var all = document.getElementById('expand-all');
+    all.addEventListener('click', function () {
+      var ds = [].slice.call(list.querySelectorAll('details'));
+      var open = ds.some(function (d) { return !d.open; });
+      ds.forEach(function (d) { d.open = open; });
+      all.textContent = open ? 'Collapse all' : 'Expand all';
+    });
+  })();
+
+  (function () {
+    var ul = document.getElementById('talk-list');
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    var upcoming = [], past = [];
+    [].slice.call(ul.children).forEach(function (li) {
+      var d = new Date(li.getAttribute('data-date') + 'T00:00:00');
+      if (d >= today) {
+        upcoming.push([d, li]);
+        var b = li.querySelector('b');
+        if (b) {
+          var tag = document.createElement('span');
+          tag.className = 'tag-up';
+          tag.textContent = 'Upcoming';
+          b.appendChild(tag);
+        }
+      } else {
+        past.push([d, li]);
+        li.classList.add('past');
+      }
+    });
+    upcoming.sort(function (a, b) { return a[0] - b[0]; });
+    past.sort(function (a, b) { return b[0] - a[0]; });
+    upcoming.concat(past).forEach(function (p) { ul.appendChild(p[1]); });
+  })();
+
+  window.addEventListener('beforeprint', function () {
+    [].slice.call(document.querySelectorAll('details')).forEach(function (d) {
+      d.dataset.wasOpen = d.open ? '1' : '';
+      d.open = true;
+    });
+  });
+  window.addEventListener('afterprint', function () {
+    [].slice.call(document.querySelectorAll('details')).forEach(function (d) {
+      d.open = d.dataset.wasOpen === '1';
+    });
+  });
+</script>
+
+</body>
+</html>
