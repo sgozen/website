@@ -15,7 +15,7 @@ One-page academic site. Everything lives in `index.html`; no build step, no depe
 2. `Settings > Pages > Custom domain`: `www.suleymangozen.com`, then tick `Enforce HTTPS`.
 3. At your DNS provider, point `www` to `<username>.github.io` with a CNAME record, and remove the
    Google Sites domain mapping.
-4. Done: `robots.txt` now allows indexing.
+4. Replace `robots.txt` with the contents of `robots-live.txt` (and delete `robots-live.txt`).
 5. Only now unpublish the Google Sites page.
 6. In Google Search Console, verify the domain and submit `sitemap.xml`.
 
