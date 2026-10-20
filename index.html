@@ -203,11 +203,13 @@
   @media (max-width:860px){
     .shell{grid-template-columns:minmax(0,1fr);gap:38px;padding-block:28px 48px}
     .ident{position:static;top:auto}
-    .portrait{max-width:168px}
+    .portrait{max-width:240px}
     .talks{columns:1}
   }
   @media (max-width:520px){
-    h1{font-size:26px}
+    .portrait{max-width:100%;aspect-ratio:5/3.6;object-position:50% 26%}
+    .ident{gap:16px}
+    h1{font-size:27px}
     .papers h3,.notes h3{font-size:16.5px}
     .lead{font-size:16px}
   }
